@@ -1,5 +1,8 @@
 {
 	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
@@ -9,8 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-	"appid": "wx8e93d9e0dba62c37",
-	"projectname": "chikalicious",
+	"appid": "wx029c287ecdfccc8c",
+	"projectname": "miniprogram",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
