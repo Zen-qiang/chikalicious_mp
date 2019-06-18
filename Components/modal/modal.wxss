@@ -1,0 +1,40 @@
+/* Components/modal/modal.wxss */
+@import "/weui.wxss";
+.mask {
+  width: 750rpx;
+  height: 100%;
+  /* background: #c0c0c0; */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  opacity: 0.8;
+}
+
+.modal {
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* border: 1px solid #f44336; */
+  z-index: 5000;
+  width: 750rpx;
+  height: 300px;
+  box-sizing: border-box;
+}
+.modal-close {
+  text-align: right;
+  margin-right: 2px;
+  margin-top: 2px;
+}
+.num-label {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+
+
+
+

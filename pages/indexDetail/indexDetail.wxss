@@ -1,0 +1,30 @@
+/* pages/indexDetail/indexDetail.wxss */
+
+.topimage {
+  width: 100%;
+  height: 400rpx;
+}
+
+.topimage image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.title {
+  margin: 40rpx 0;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.con {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+.wxParse-p {
+  padding: 0;
+  box-sizing: border-box;
+}

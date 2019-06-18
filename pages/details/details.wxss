@@ -1,0 +1,74 @@
+/* pages/details/details.wxss */
+
+.pdtinfo-container {
+  padding-bottom: 100rpx;
+}
+
+.pdtinfo-title {
+  width: 100%;
+  height: 44rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.pdtinfo-swiper {
+  width: 100%;
+  height: 800rpx;
+  position: absolute;
+  z-index: -1;
+}
+
+.a_white {
+  width: 100%;
+  height: 770rpx;
+}
+
+.pdtinfo-swiper image {
+  width: 100%;
+  height: 800rpx;
+}
+
+/*  */
+
+.pdtinfo-details {
+  width: 100%;
+  border-radius: 30rpx 30rpx 0 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.pdtinfo-details .row {
+  overflow: hidden;
+  padding: 0 80rpx;
+  font-size: 24rpx;
+}
+
+.pdtinfo-details .row1>view {
+  height: 190rpx;
+  font-size: 37rpx;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/*  */
+
+.bottomTab {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2000;
+}
+
+.bottomTab .tbutt {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}

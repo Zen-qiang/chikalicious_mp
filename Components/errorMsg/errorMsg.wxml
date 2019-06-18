@@ -1,0 +1,2 @@
+<!--Components/errorMsg/errorMsg.wxml-->
+<text class="errorMsg">{{msg}}</text>

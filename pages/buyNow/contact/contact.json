@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "更换联系方式",
+  "usingComponents": {
+    "zan-field": "../../../libs/ZanUI/field/index"
+  }
+}

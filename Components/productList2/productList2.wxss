@@ -1,0 +1,20 @@
+/* Components/productList2/productList2.wxss */
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.white_space {
+  width: 320rpx;
+  height: 20rpx;
+  margin: 20rpx;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.load-more {
+  text-align: center;
+  font-size: 20rpx;
+}

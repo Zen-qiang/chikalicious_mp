@@ -1,0 +1,22 @@
+<!--pages/allProduct/allProduct.wxml-->
+<!-- <zan-img-tab scroll="{{ scroll }}" list="{{ tabList }}" selected-id="{{ selectedId }}" height="{{ height }}" fixed="{{ fixed }}" bindtabchange="handleTabChange" /> -->
+<block wx:if="{{noData}}">
+  <view style='width:100%;height:100%'>
+    <image style='width:100%;height:100%' mode='aspectFit' src='/images/no_locate.png'></image>
+  </view>
+</block>
+<block wx:else>
+  <view class='contenter'>
+    <view class='top'>
+      <scroll-view scroll-x>
+        <block wx:for="{{tabList}}" wx:key="{{index}}">
+          <view class="{{selectedId==item.id?'top_tab_butt checked':'top_tab_butt'}}" bindtap='handleTabChange' data-type='{{item.id}}'>{{item.title}}</view>
+        </block>
+      </scroll-view>
+      <view class='white_space'></view>
+    </view>
+    <view class='con'>
+      <product-list pdtlist="{{productList}}" type='CAKE' loading="{{loading}}"></product-list>
+    </view>
+  </view>
+</block>

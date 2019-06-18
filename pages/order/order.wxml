@@ -1,0 +1,13 @@
+<view class="orderpage">
+  <view class="page__bd">
+    <view class='tab'>
+      <zan-tab list="{{ tab1.list }}" selected-id="{{ tab1.selectedId }}" bind:tabchange="tabAction" />
+    </view>
+    <view style='height:30rpx'></view>
+    <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="cell" wx:key="{{idx}}">
+      <view class='orderCell'>
+        <orderlist cell="{{cell}}" bind:click="onCellClick" bind:delOrderCallBack="delOrderCallBack"></orderlist>
+      </view>
+    </block>
+  </view>
+</view>

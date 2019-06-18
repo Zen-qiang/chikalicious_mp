@@ -1,0 +1,8 @@
+<view class='container'>
+  <zan-field title="" placeholder="收货人姓名" value="" bindchange="nameChange"> </zan-field>
+  <zan-field title="" placeholder="收货人手机号" input-type="number" bindchange="tellChange"> </zan-field>
+
+  <view class='butt'>
+    <button bindtap='saveAction'>保存</button>
+  </view>
+</view>

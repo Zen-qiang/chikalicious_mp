@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "zan-panel": "../../libs/ZanUI/panel/index",
+    "zan-cell": "../../libs/ZanUI/cell/index",
+    "zan-icon": "../../libs/ZanUI/icon/index",
+    "zan-row": "../../libs/ZanUI/row/index",
+    "zan-col": "../../libs/ZanUI/col/index",
+    "zan-button": "../../libs/ZanUI/btn/index"
+  }
+}

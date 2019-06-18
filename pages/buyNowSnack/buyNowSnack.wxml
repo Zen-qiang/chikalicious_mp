@@ -1,0 +1,78 @@
+<!--pages/buyNowSnack/buyNowSnack.wxml-->
+<view class='container'>
+
+  <view class='header' bindtap='addcontact'>
+    <view class='h_con'>
+      <view>
+        <view class='contact'>
+          <text>收货人:</text>
+          <text>{{name}}</text>
+          <text class='tell'>{{tell}}</text>
+        </view>
+        <view class='contact'>
+          <text>{{address}}</text>
+        </view>
+      </view>
+      <view class='butt'>选择联系方式</view>
+    </view>
+  </view>
+
+  <view class='con'>
+    <view class='h_row'>
+      <view style='width:40%; height:300rpx'>
+        <image style='width:100%; height:300rpx' src='{{prodInfo.pdtInfo.imgUrl}}'></image>
+      </view>
+      <view style='width:50%'>
+        <!-- 名称 -->
+        <view style='margin-bottom:26rpx;font-size:26rpx'>{{prodInfo.pdtInfo.title}}</view>
+        <!-- 规格 -->
+        <view style='margin-bottom:26rpx;font-size:26rpx'>
+          <view style='margin-bottom:26rpx;'>规格:</view>
+          <view class='checkCon'>
+            <block wx:for="{{prodInfo.pdtInfo.spec}}" wx:for-index="idx" wx:for-item="spec" wx:key="{{idx}}">
+              <view class='{{specID==spec.id?"checkbox checked":"checkbox"}}' bindtap='specAction' data-type='{{spec}}'>{{spec.value}}</view>
+            </block>
+          </view>
+        </view>
+        <!-- 数量 -->
+        <view style='font-size:26rpx'>
+          <view style='margin-bottom:26rpx;'>数量:</view>
+          <view>
+            <zan-stepper className="step" stepper="{{count}}" min="{{stepper.min}}" max="{{stepper.max}}" bind:change="countStepperChange" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='con'>
+    <view class='row' style='height:120rpx;' bindtap='invoiceAction'>
+      <view class='left'>需要发票</view>
+      <view class='right'>
+        <text>{{isNeedBill?"是":"否"}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='con'>
+    <view class='message line'>
+      <view class='title' style='font-size:27rpx; margin:0 0 10rpx 0'>订单留言</view>
+      <view class='detail' style='color:#B8B8B8;font-size:23rpx;'>如有特殊要求请留言，我们将及时跟进您的需求</view>
+      <view class='area'>
+        <textarea bindinput='textInputAction' placeholder="" maxlength='25' />
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='amount' style=''>
+      <text style='font-size:23rpx'>总金额：</text>
+      <text style='font-size:20rpx; color:#ECB546;'>￥</text>
+      <text style='font-size:37rpx; color:#ECB546;'>{{orderPrice}}</text>
+    </view>
+    <view>
+      <view class='butt' bindtap='goPurchaseAction'>去付款</view>
+    </view>
+  </view>
+
+</view>

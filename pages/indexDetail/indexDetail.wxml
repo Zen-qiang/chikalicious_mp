@@ -1,0 +1,13 @@
+<!--pages/indexDetail/indexDetail.wxml-->
+<import src="../../libs/wxParse/wxParse.wxml" />
+<view>
+  <view class='topimage'>
+    <image mode='aspectFill' src='{{imgUrl}}'></image>
+  </view>
+  <view style='width:100%; padding:0 20px; box-sizing:border-box;'>
+    <view class='title'>{{name}}</view>
+  </view>
+  <view class='con'>
+    <template is="wxParse" data="{{wxParseData:webContent.nodes}}" />
+  </view>
+</view>

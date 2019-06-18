@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "全部商品",
+  "backgroundColor": "#f7f5f1",
+  "usingComponents": {
+    "zan-img-tab": "../../libs/ZanUI/imgTab/index",
+    "product-list": "/Components/productList2/productList2"
+  }
+}

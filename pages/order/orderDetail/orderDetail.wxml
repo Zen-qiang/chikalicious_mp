@@ -1,0 +1,176 @@
+<view class='n_container'>
+  <view class='conView'>
+    <image class='con_logo' src='/images/h_icon1.png' mode="aspectFill"></image>
+    <view class='con_top'>
+      <view class='fs30 line lh110' style='overflow:hidden'>
+        <view class='r_left'>提货人：{{orderInfo.consigneeName}}</view>
+        <view class='r_right'>{{orderInfo.consigneePhoneNum}}</view>
+      </view>
+      <view class='h320 line' style='overflow:hidden'>
+        <view style='height:150rpx; overflow: hidden; margin-top:85rpx;'>
+          <view class='r_left' style='height:150rpx; vertical-align: top;'>
+            <view style='display:inline-block; width:150rpx; height:150rpx;'>
+              <image src="{{orderInfo.product[0].imageUrl}}" style='width:150rpx; height:150rpx; border-radius: 10rpx;'></image>
+            </view>
+            <view style='display:inline-block; height:150rpx; vertical-align: top; margin-left:20rpx;'>
+              <view class='fs27' style='height:66rpx;'>{{orderInfo.product[0].title}}</view>
+              <view class='fs23 h22' style='margin-top:20rpx;'>
+                规格:{{orderInfo.product[0].spec}}
+              </view>
+              <block wx:if="{{orderInfo.product[0].type=='CAKE'}}">
+                <view class='fs23 h22' style='margin-top:20rpx;'>
+                  是否需要蜡烛：{{orderInfo.product[0].needCandle}}
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class='r_right' style='height:150rpx;'>
+            <view class='fs23 h22' style='margin-top:86rpx;'>
+              数量：{{orderInfo.product[0].number}}
+            </view>
+            <block wx:if="{{orderInfo.product[0].type=='CAKE'}}">
+              <view class='fs23 h22' style='margin-top:20rpx;'>
+                餐具：{{orderInfo.product[0].tablewareNum}}
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <!--  -->
+      <block wx:if="{{orderInfo.product[0].type=='SNACK'}}">
+        <view class='t_row line lh110 fs21'>
+          <view class=''>
+            <text>是否需要发票</text>
+            <text class='gray' style='margin-left: 20rpx'>{{orderInfo.needInvoice}}</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='t_row line lh110 fs21'>
+          <view class=''>
+            <text>自提时间</text>
+            <text class='gray' style='margin-left: 20rpx'>{{orderInfo.extractTime?orderInfo.extractTime:""}}</text>
+          </view>
+          <view class=''>
+            <text>是否需要发票</text>
+            <text class='gray' style='margin-left: 20rpx'>{{orderInfo.needInvoice}}</text>
+          </view>
+        </view>
+      </block>
+      <!--  -->
+      <view class='t_row line lh110 fs21'>
+        <view class=''>发票抬头</view>
+        <view class='gray'>{{orderInfo.invoiceTitle?orderInfo.invoiceTitle:""}}</view>
+      </view>
+      <view class='t_row line lh110 fs21'>
+        <view class=''>发票税号</view>
+        <view class='gray'>{{orderInfo.invoiceNo?orderInfo.invoiceNo:""}}</view>
+      </view>
+      <view class='t_row line lh110 fs21'>
+        <view class=''>地址、电话</view>
+        <view class='gray'>{{orderInfo.invoiceAddress?orderInfo.invoiceAddress:""}}</view>
+      </view>
+      <view class='t_row line lh110 fs21'>
+        <view class=''>开户行及账号</view>
+        <view class='gray'>{{orderInfo.invoiceBankAccount?orderInfo.invoiceBankAccount:""}}</view>
+      </view>
+      <view class='t_row line lh110 fs21'>
+        <view class=''>订单留言</view>
+        <view class='gray'>{{orderInfo.note}}</view>
+      </view>
+      <view class='t_row fs21' style='height:110rpx;'>
+        <view class='' style='margin-top:15rpx'>
+          <view>订单编号</view>
+          <view class='gray'>{{orderInfo.orderNumber}}</view>
+        </view>
+        <view class='' style='text-align:right; margin-top:15rpx'>
+          <view>下单时间</view>
+          <view class='gray'>{{orderInfo.orderTime}}</view>
+        </view>
+      </view>
+      <!--  -->
+      <block wx:if="{{orderInfo.product[0].type=='SNACK'}}">
+        <view class='t_row line'></view>
+        <view class='t_row fs21' style='height:110rpx;'>
+          <view class='' style='margin-top:15rpx'>
+            <view>物流公司</view>
+            <view class='gray'>3232{{orderInfo.expressCompany?orderInfo.expressCompany:""}}</view>
+          </view>
+          <view class='' style='text-align:left; margin-top:15rpx'>
+            <view>物流编号</view>
+            <view class='gray'>{{orderInfo.waybillNum?orderInfo.waybillNum:""}}</view>
+          </view>
+        </view>
+      </block>
+      <!--  -->
+    </view>
+    <view class='con_circle c_left'></view>
+    <view class='con_circle c_right'></view>
+    <view class='con_line'></view>
+  </view>
+
+  <view class='bgView'>
+    <view class='bg_top' style='{{orderInfo.product[0].type=="SNACK"?"height:1400rpx":"height:1300rpx"}}'></view>
+    <view class='bg_bott'>
+      <block wx:if="{{orderInfo.statusEn == 'WAITING_EXTRACT'}}">
+        <view class='bg_view'>
+          <view style='width:50%; color:#fff'>
+            <view class='fs21' style='height:21rpx; line-height:21rpx;'>实付款</view>
+            <view style='height:41rpx; line-height:41rpx;'>
+              <text class='fs22'>￥</text>
+              <text style='font-size:41rpx'>{{orderInfo.amount}}</text>
+            </view>
+          </view>
+          <view style='width:50%'>
+            <button class='fs27' style='color:#ECB546;font-weight:400' bindtap='confirmReceipt'>
+              确认收货
+            </button>
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{orderInfo.statusEn == 'WAITING_PAYMENT'}}">
+        <view class='bg_view'>
+          <view style='width:50%; color:#fff'>
+            <view class='fs21' style='height:21rpx; line-height:21rpx;'>实付款</view>
+            <view style='height:41rpx; line-height:41rpx;'>
+              <text class='fs22'>￥</text>
+              <text style='font-size:41rpx'>{{orderInfo.amount}}</text>
+            </view>
+          </view>
+          <view style='width:50%'>
+            <button class='fs27' style='color:#ECB546;font-weight:400' bindtap='goPurch'>
+              去支付
+            </button>
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{orderInfo.statusEn == 'COMPLETED'}}">
+        <view class='bg_view'>
+          <view style='width:50%; color:#fff'>
+            <view class='fs21' style='height:21rpx; line-height:21rpx;'>实付款</view>
+            <view style='height:41rpx; line-height:41rpx;'>
+              <text class='fs22'>￥</text>
+              <text style='font-size:41rpx'>{{orderInfo.amount}}</text>
+            </view>
+          </view>
+          <view style='width:50%'>
+            <button class='fs27' style='color:#ECB546;font-weight:400' bindtap='purchAgain'>
+              再次购买
+            </button>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='bg_view'>
+          <view style='width:100%; color:#fff'>
+            <view style='height:41rpx; line-height:41rpx; text-align: center'>
+              <text>实付款:</text>
+              <text class='fs22' style='margin-left:10rpx'>￥</text>
+              <text style='font-size:41rpx'>{{orderInfo.amount}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

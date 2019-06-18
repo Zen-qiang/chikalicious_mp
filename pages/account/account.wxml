@@ -1,0 +1,97 @@
+<view class='container'>
+
+  <view class='header'>
+    <view class='left'>
+      <view class='name' wx:if="{{!isLogin}}">
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="save-btn">登录/注册</button>
+      </view>
+      <view class='name' wx:if="{{isLogin}}">{{acountInfo.name}}</view>
+    </view>
+    <view class='right'>
+      <image class='logo' mode="aspectFill" src='{{isLogin?acountInfo.icon:"/images/h_icon1.png"}}'></image>
+    </view>
+  </view>
+
+  <view class='order'>
+
+    <view class='line'></view>
+    <view class='order_cell' bindtap="showOrder" data-type="0">
+      <view class='cleft'>我的订单</view>
+      <view class='cright'>
+        <text style=''>查看全部订单</text>
+        <zan-icon type="arrow"></zan-icon>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!--  -->
+    <view class='row'>
+      <view class='cell' bindtap="showOrder" data-type="1">
+        <image src='/images/h_icon6.png'></image>
+        <view>待付款</view>
+      </view>
+      <view class='cell' bindtap="showOrder" data-type="2">
+        <image src='/images/h_icon2.png'></image>
+        <view>制作中</view>
+      </view>
+      <view class='cell' bindtap="showOrder" data-type="3">
+        <image src='/images/h_icon4.png'></image>
+        <view>待收货</view>
+      </view>
+      <view class='cell' bindtap="showOrder" data-type="4">
+        <image src='/images/h_icon5.png'></image>
+        <view>已完成</view>
+      </view>
+    </view>
+    <!--  -->
+
+    <view class='line'></view>
+    <zan-cell title="收藏" bindtap='cartAction'>
+      <view style='color: #b7b5b5;' slot="footer">
+        <zan-icon type="arrow"></zan-icon>
+      </view>
+    </zan-cell>
+
+    <view class='line'></view>
+    <zan-cell title="收货地址" bindtap='addressAction'>
+      <view style='color: #b7b5b5;' slot="footer">
+        <zan-icon type="arrow"></zan-icon>
+      </view>
+    </zan-cell>
+
+    <view class='line'></view>
+    <button class='butt' open-type="contact">
+      <zan-cell title="在线客服">
+        <view style='color: #b7b5b5;' slot="footer">
+          <zan-icon type="arrow"></zan-icon>
+        </view>
+      </zan-cell>
+    </button>
+
+    <zan-panel class="panel-cell">
+      <zan-cell title="帮助中心" bindtap="aboutAction" data-type="HELP_PAGE">
+        <view style='color: #b7b5b5;' slot="footer">
+          <zan-icon type="arrow"></zan-icon>
+        </view>
+      </zan-cell>
+    </zan-panel>
+
+    <zan-cell title="关于我们" bindtap="aboutAction" data-type="ABOUT_US">
+      <view style='color: #b7b5b5;' slot="footer">
+        <zan-icon type="arrow"></zan-icon>
+      </view>
+    </zan-cell>
+  </view>
+
+
+  <block wx:if="{{isLogin}}">
+    <view class="panel-butt">
+      <button bindtap="loginOut" class='login_out'>退出登录</button>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="panel-butt">
+      <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="save-btn">登录</button>
+    </view>
+  </block>
+
+</view>

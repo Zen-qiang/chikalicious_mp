@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "管理收货地址",
+  "usingComponents": {
+    "contacts-cell": "/Components/contactsCell/contactsCell",
+    "contacts-butt-cell": "/Components/contactsButtCell/contactsButtCell"
+  },
+  "enablePullDownRefresh": false
+}

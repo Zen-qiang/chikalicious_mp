@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "product": "/Components/product2/product2",
+    "zan-loading": "../../libs/ZanUI/loading/index"
+  }
+}

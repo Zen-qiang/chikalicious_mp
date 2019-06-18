@@ -1,2 +1,0 @@
-# chikalicious
-a weixin miniprogram

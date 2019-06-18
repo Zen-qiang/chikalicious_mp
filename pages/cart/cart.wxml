@@ -1,0 +1,31 @@
+<import src="../../libs/ZanUI/loadmore/index.wxml" />
+
+<view class='container'>
+  <block wx:if="{{isLogin}}">
+
+    <view class='top'>
+      <view class='top_tab' style=''>
+        <view class='{{cType=="CAKE"? "top_tab_butt checked":"top_tab_butt"}}' bindtap='kindAction' data-type='CAKE'>蛋糕</view>
+        <view class='{{cType=="SNACK"? "top_tab_butt checked":"top_tab_butt"}}' bindtap='kindAction' data-type='SNACK'>周边</view>
+      </view>
+      <view class='white_space'></view>
+    </view>
+
+    <view class='con'>
+      <import src="../../libs/ZanUI/loadmore/index.wxml" />
+      <!--   -->
+      <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="cell" wx:key="{{idx}}">
+        <cartlist shopData="{{cell}}" cType="{{cType}}" index="{{idx}}" bind:click="clickAction" bind:delete="deleteAction"></cartlist>
+      </block>
+      <view class='black'></view>
+    </view>
+    <view class="load-more">
+      <!-- <template class="" is="zan-loadmore" data="{{loading: true}}" wx:if="{{loading}}"></template> -->
+      <!-- <template is="zan-loadmore" data="{{ nodata: true,nodata_str: '--' }}" wx:if="{{!loading}}"></template> -->
+    </view>
+
+  </block>
+  <block wx:else>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="save-btn">登录</button>
+  </block>
+</view>

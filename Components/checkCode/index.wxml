@@ -1,0 +1,6 @@
+ <view class='checkCode_input'>
+    <input placeholder="请输入验证码" bindinput="checkCodeInput" />
+    <button class="phone-checkCode" bindtap="getCheckCode" disabled="{{checkcodeDisable}}">
+      <text>{{showCountdown}}</text>
+    </button>
+  </view>

@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "填写发票",
+  "usingComponents": {
+    "zan-field": "../../../libs/ZanUI/field/index",
+    "zan-cell": "../../../libs/ZanUI/cell/index"
+    
+  }
+}

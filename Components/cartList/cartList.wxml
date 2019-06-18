@@ -1,0 +1,18 @@
+<view class="container">
+
+  <view class="touch-item {{isTouchMove ? 'touch-move-active' : ''}}" data-index="{{idx}}" data-pdtId="{{shopData.productID}}" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtap='cellSelected'>
+    <view class="content">
+      <view class='img left'>
+        <image src='{{shopData.imgUrl}}'></image>
+      </view>
+      <view class='text left'>
+        <view class='title'>{{shopData.name}}</view>
+        <view class='detail'>{{shopData.size}}</view>
+        <view class='price'>￥{{shopData.price}}</view>
+      </view>
+      <view class='right'></view>
+    </view>
+    <view class="del" catchtap="del" data-index="{{idx}}">删除</view>
+  </view>
+
+</view>

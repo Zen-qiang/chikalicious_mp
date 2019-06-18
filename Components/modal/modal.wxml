@@ -1,0 +1,28 @@
+<!--Components/modal/modal.wxml-->
+<view>
+  <view class="mask" catchtouchmove="move"></view>
+  <view class="page modal" catchtouchmove="move">
+    <view class="modal-close" bindtap="closeModal">
+      <image src="../../images/close.png" style="width: 25px; height: 25px;"></image>
+    </view>
+    <view class="page__bd page__bd_spacing modal_container">
+      <!-- 数量： -->
+      <view class="weui-flex num">
+        <view>
+          <view class="placeholder num-label">数量:</view>
+        </view>
+        <view class="weui-flex__item" style="text-align: right;">
+          <view class="placeholder">
+            <zan-stepper
+                stepper="{{ stepper.stepper }}"
+                min="1"
+                max="5"
+                bind:change="handleZanStepperChange"
+              >
+            </zan-stepper>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+/**app.wxss**/
+@import "/libs/wxParse/wxParse.wxss";
+@import 'weui.wxss';
+@import './libs/ZanUI/index.wxss';
+
+
+.container {
+  /* height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box; */
+  font-size: 24rpx;
+}
+
+page {
+  background: #fff;
+  height: 100%;
+  /* background-color: #f7f5f1; */
+}
+
+.line {
+  border-bottom: 1px solid #efefef;
+}
+
+.fs21 {
+  font-size: 21rpx;
+}
+
+.fs22 {
+  font-size: 22rpx;
+}
+
+.fs23 {
+  font-size: 23rpx;
+}
+
+.fs24 {
+  font-size: 24rpx;
+}
+
+.fs25 {
+  font-size: 25rpx;
+}
+
+.fs26 {
+  font-size: 26rpx;
+}
+
+.fs27 {
+  font-size: 27rpx;
+}
+
+.fs28 {
+  font-size: 28rpx;
+}
+
+.fs29 {
+  font-size: 29rpx;
+}
+
+.fs30 {
+  font-size: 30rpx;
+}

@@ -1,0 +1,15 @@
+<view class='container'>
+  <zan-cell title="是否需要发票">
+    <switch slot="footer" bindchange="switchChange" checked='{{isBill}}' />
+  </zan-cell>
+  <zan-field title="" placeholder="发票抬头" value="{{billHeader}}" bindchange="textChange"></zan-field>
+  <zan-field title="" placeholder="发票税号" value="{{billNo}}" bindchange="billNoChange"></zan-field>
+
+  <zan-field title="" placeholder="地址、电话（选填）" value="{{invoiceAddress}}" bindchange="invoiceAddressChange"></zan-field>
+  <zan-field title="" placeholder="开户行及账号（选填）" value="{{invoiceBankAccount}}" bindchange="invoiceBankAccountChange"></zan-field>
+
+  <view style='color: #ecb546; margin:28rpx'>*小贴士：目前只提供纸质发票，确认收货后可随蛋糕一并领取</view>
+  <view class='butt'>
+    <button bindtap='saveAction'>保存</button>
+  </view>
+</view>

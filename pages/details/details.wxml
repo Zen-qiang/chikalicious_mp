@@ -1,0 +1,51 @@
+<import src="../../libs/wxParse/wxParse.wxml" />
+<scroll-view scroll-y class="pdtinfo-container">
+  <view class="pdtinfo-title">
+    <image mode='aspectFill' style="width: 44rpx;height: 44rpx; display:inline-block" src="{{headerData.iconUrl}}"></image>
+    <view style='float:right'>
+      <view wx:if='{{headerData.isLogin}}' style='display:inline-block;'>{{headerData.userName}}</view>
+      <view wx:if='{{!headerData.isLogin}}' style='display:inline-block;' bindtap="login">登录</view>
+      <view style='display:inline-block; margin-left:20rpx'>{{headerData.location}}</view>
+    </view>
+  </view>
+
+  <view class="pdtinfo-body">
+    <swiper class="pdtinfo-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{pdtInfo.imgList}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='a_white'></view>
+
+    <view class="pdtinfo-details">
+      <view class='row row1'>
+        <view style='float:left; width:60%;'>
+          <text style="word-wrap:break-word;white-space:normal;word-break:break-all;">{{pdtInfo.title}}</text>
+        </view>
+        <view style='float:right '>
+          <text style='display: inline-block'>¥{{pdtInfo.price}}</text>
+          <text style='color:#CCCCCC;font-size:25rpx; text-decoration:line-through;margin-left:10rpx; display:inline-block'>￥{{pdtInfo.originalPrice}}</text>
+        </view>
+      </view>
+      <view class='row'>
+        <block wx:if="{{type==='CAKE'}}">
+          <view style="color:#A7A5A5">接受预定时间：{{pdtInfo.presetTime}}</view>
+          <view style="color:#A7A5A5">{{pdtInfo.presetTimeDesc}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view style='width:100%; margin:80rpx 0 20rpx 0;'>
+      <template is="wxParse" data="{{wxParseData:webContent.nodes}}" />
+    </view>
+    <!-- <rich-text nodes="{{pdtInfo.content}}"></rich-text> -->
+  </view>
+</scroll-view>
+
+<!--商品详情-->
+<view class="bottomTab">
+  <view class='tbutt ' bindtap="changeFav" style='background:#ECB546; color:#fff;border-top: 1px solid #ECB546; '>{{pdtInfo.isFav ? '取消收藏 ' : '收藏 '}}</view>
+  <view class='tbutt ' bindtap="order" style='color:#ECB546; background:#fff; border-top: 1px solid #ECB546; '>{{pdtInfo.canPurchase ? '立即购买 ' : '不在预定时间 '}}</view>
+</view>

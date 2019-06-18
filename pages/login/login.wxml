@@ -1,0 +1,35 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="login-container">
+    <view class="login-cell input-cell">
+      <input class="weui-input" bindinput="bindPhoneInput" value="{{telPhone}}" placeholder="请输入手机号" placeholder-class="phcolor" bindblur="confirmPhone" />
+    </view>
+    <view class="login-cell input-cell">
+      <view class="input-cell-container">
+        <input style="width:100%;" class="weui-input" bindinput="bindVerCode" value="{{verCode}}" placeholder="请输入手机验证码" placeholder-class="phcolor" bindblur="confirmPhone" />
+      </view>
+      <view style="color:rgba(211,207,198,1);font-size:30rpx;">|</view>
+      <button class="ver-code-container-btn {{checkcodeDisable?'login-btn-disabled':''}}" bindtap='getVerCode' disabled='{{checkcodeDisable}}'>{{verText}}</button>
+    </view>
+    <view class="login-cell">
+      <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfoLogin">立即登录</button>
+    </view>
+    <!-- 同意 -->
+    <view class="login-agree">
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" color="rgba(212,158,92,1)" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            <view class="agree_text">同意</view>
+            <view class="weui-agree__link" catchtap='xieyiAction'>Chikalicious</view>
+            <!-- <navigator url="" class="weui-agree__link">chikalicious</navigator> -->
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+
+</view>

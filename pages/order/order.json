@@ -1,0 +1,12 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "我的订单",
+  "backgroundColor": "#f7f5f1",
+  "usingComponents": {
+    "orderlist":"/Components/orderList/orderListCell",
+    "zan-tab": "../../libs/ZanUI/tab/index"
+  },
+  "window": {
+    "enablePullDownRefresh": true
+  }
+}

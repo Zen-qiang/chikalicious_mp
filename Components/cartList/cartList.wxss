@@ -1,0 +1,133 @@
+.container {
+  margin: 20rpx 0;
+  font-size: 27rpx;
+  background-color: #fff;
+}
+
+.touch-item {
+  width: 100%;
+  height: 160rpx;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow:0rpx 4rpx 6rpx 7rpx rgba(243,243,243,0.5); 
+}
+
+.content {
+  width: 100%;
+  margin-left: -90px;
+  margin-right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+}
+
+.del {
+  background-color: #ECB546;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* 公用样式 */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.select {
+  background-color: yellow;
+}
+
+/*  */
+
+.header {
+  border-bottom: 1px solid #ccc;
+  height: 100rpx;
+}
+
+.header .checkbox {
+  width: 60rpx;
+  height: 100rpx;
+  margin-right: 10rpx;
+}
+
+.header .checkbox .butt {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid #ccc;
+  border-radius: 40rpx;
+  margin: auto;
+  margin-top: 30rpx;
+}
+
+.header view {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.header .status {
+  margin-right: 20rpx;
+}
+
+/* 多选按钮样式 */
+
+.content .checkbox {
+  width: 60rpx;
+  height: 120rpx;
+}
+
+.content .checkbox .butt {
+  width: 40rpx;
+  height: 40rpx;
+  border: 1px solid #ccc;
+  border-radius: 40rpx;
+  margin: auto;
+  margin-top: 40rpx;
+}
+
+.content .img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.content .img image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.content .text {
+  margin-left: 20rpx;
+}
+
+.content .text .title {
+  font-size: 28rpx;
+}
+
+.content .text .detail {
+  font-size: 32rpx;
+}
+
+.content .text .price {
+  bottom: 0rpx;
+  position: absolute;
+  color: #BEBEBE;
+}

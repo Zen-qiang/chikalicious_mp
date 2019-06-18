@@ -1,0 +1,53 @@
+.zan-stepper {
+  color: #ecb546;
+}
+
+.zan-stepper view {
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 20px;
+  border: 1rpx solid #ecb546;
+}
+
+.zan-stepper .zan-stepper__minus {
+  width: 30px;
+  border-radius: 30px;
+}
+
+.zan-stepper .zan-stepper__text {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 30px;
+  width: 40px;
+  min-height: auto;
+  font-size: 30rpx;
+  line-height: 30px;
+}
+
+.zan-stepper .zan-stepper__plus {
+  width: 30px;
+  border-radius: 30px;
+}
+
+.zan-stepper .zan-stepper--disabled {
+  background: #f8f8f8;
+  color: #bbb;
+  border-color: #e8e8e8;
+}
+
+.zan-stepper--small view {
+  min-width: 36px;
+  line-height: 18px;
+}
+
+.zan-stepper--small .zan-stepper__text {
+  width: 36px;
+  line-height: 28px;
+  height: 28px;
+}

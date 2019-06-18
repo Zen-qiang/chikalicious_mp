@@ -1,0 +1,37 @@
+<!--pages/locate.wxml-->
+<!-- <view class='search font28'>城市/拼音</view> -->
+
+<view class='content'>
+  <view class='now'>
+    <view class='fontTitle'>当前城市</view>
+    <view class='line'></view>
+    <view class='city sed'>{{cityName}}</view>
+  </view>
+  <view class='line'></view>
+  <view class='hot'>
+    <view class='fontTitle'>其它城市</view>
+    <view class='f_con'>
+      <block wx:for="{{cityList}}" wx:for-index="index" wx:for-item="city" wx:key="*this">
+        <view class='city' bindtap='changeLocation' data-city='{{city}}'>{{city.cityName}}</view>
+      </block>
+      <block wx:if="{{cityList.length%3==1}}">
+        <view class='city' style='border:none'></view>
+        <view class='city' style='border:none'></view>
+      </block>
+      <block wx:if="{{cityList.length%3==2}}">
+        <view class='city' style='border:none'></view>
+      </block>
+    </view>
+  </view>
+  <!-- <view class='line'></view> -->
+
+  <!-- <view class='list'>
+    <view class='fontTitle'>所有城市</view>
+    <block wx:for="{{cityList}}" wx:for-index="index" wx:for-item="city" wx:key="*this">
+      <view class='item'>
+        <text> {{city.name}} </text>
+      </view>
+    </block>
+  </view> -->
+
+</view>

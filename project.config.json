@@ -1,0 +1,153 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"uglifyFileName": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wx82d1d364a8c3a105",
+	"projectname": "chikalicious",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 18,
+			"list": [
+				{
+					"id": 0,
+					"name": "定位",
+					"pathName": "pages/locate/locate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "忘记密码",
+					"pathName": "pages/passwordBack/passwordBack",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "修改密码",
+					"pathName": "pages/updatePwd/updatePwd",
+					"query": "telPhone=15261800369"
+				},
+				{
+					"id": 4,
+					"name": "全部商品",
+					"pathName": "pages/allProduct/allProduct",
+					"query": "telPhone=15261800369"
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/account/account",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "立即购买",
+					"pathName": "pages/buyNow/buyNow",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/authorize/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/order/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "周边",
+					"pathName": "pages/snack/snack",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/details/details",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "填写发票",
+					"pathName": "pages/buyNow/invoice/invoice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理收货地址",
+					"pathName": "pages/contactsManager/contactsManager",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页幻灯片详情",
+					"pathName": "pages/indexDetail/indexDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发票",
+					"pathName": "pages/buyNow/invoice/invoice"
+				}
+			]
+		}
+	}
+}

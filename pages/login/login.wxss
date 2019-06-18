@@ -1,0 +1,120 @@
+/* pages/login/login.wxss */
+
+page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  padding: 0 27px;
+  box-sizing: border-box;
+  border: 1px solid #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+}
+
+.login-cell {
+  display: flex;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.input-cell {
+  border-bottom: 1px solid rgba(210, 210, 210, 1);
+  padding: 20rpx 0;
+}
+.input-cell-container {
+  width:55%;
+  display: flex;
+  align-items: center;
+}
+/* 输入框 */
+
+input {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.phcolor {
+  color: rgba(210, 210, 210, 1);
+  font-size: 30rpx;
+  width: 100%;
+}
+
+.ver-code-container-btn {
+  width: 44%;
+  display: inline-block;
+  font-size: 30rpx;
+  right: 0;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 0;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(231, 178, 70, 1);
+  border: 0;
+  background-color: #fff;
+}
+
+.ver-code-container-btn::after {
+  border: none;
+}
+
+.login-btn {
+  width: 100%;
+  height: 71rpx;
+  background: linear-gradient(5deg, rgba(212, 165, 70, 1), rgba(236, 181, 70, 1));
+  border-radius: 7rpx;
+  color: #fff;
+  font-size: 27rpx;
+  line-height: 71rpx;
+  margin-top: 100rpx;
+  margin-bottom: 52rpx;
+}
+
+.login-btn-disabled {
+  background-color: #fff !important;
+  color: rgba(231, 178, 70, 1) !important;
+}
+
+.login-btn::after {
+  border: none;
+}
+
+/* 同意 */
+
+.login-agree {
+  width: 100%;
+  text-align: center;
+}
+
+.weui-agree__checkbox-icon {
+  border-radius: 0;
+  border: 1px solid rgba(212, 158, 92, 1);
+}
+
+.agree_text {
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(143, 142, 142, 1);
+  margin-left: 5px;
+}
+
+.weui-agree__link {
+  margin-left: 10px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(143, 142, 142, 1);
+}

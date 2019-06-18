@@ -1,0 +1,11 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "zan-cell": "../../../libs/ZanUI/cell/index",
+    "zan-button": "../../../libs/ZanUI/btn/index"
+  },
+  "window": {
+    "enablePullDownRefresh": false
+  }
+}

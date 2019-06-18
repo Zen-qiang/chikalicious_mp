@@ -1,0 +1,58 @@
+<view class='content'>
+  <view class='header'>
+    <view class='date left'>{{cell.date}}</view>
+    <view class='del right'>
+      <view class='status'>{{cell.state}}</view>
+      <block wx:if="{{cell.state=='待付款' || cell.state=='已完成'}}">
+        <zan-icon type="delete" bindtap="buttAction" data-type='0'></zan-icon>
+      </block>
+    </view>
+  </view>
+  <!--  -->
+  <view class='middle'>
+    <block wx:for="{{cell.product}}" wx:for-index="idx" wx:for-item="prod" wx:key="">
+      <view class='cell' bindtap="cellSelected" data-type='{{idx}}'>
+        <view class='con left'>
+          <view class='img left'>
+            <image src='{{prod.imgUrl}}'></image>
+          </view>
+          <view class='lab left _w_i_align'>
+            <view>
+              <view style='font-size:26rpx;width:200rpx;'>
+                <text style='overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>{{prod.name}}</text>
+              </view>
+              <view style='color:#BEBEBE'>{{prod.size}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='msg right _w_i_align'>
+          <view>
+            <view>￥{{prod.price}} x{{prod.count}}</view>
+            <view></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!--  -->
+  <view class='bottom'>
+    <view class='bot_left'>
+      共{{cell.totalCount}}件，应付总额
+      <text class='f_t_yellow'>￥{{cell.totalPrice}}</text>
+    </view>
+    <view class='bot_right'>
+      <view hidden="{{cell.status != '00'}}">
+        <view class='button' bindtap="buttAction" data-type='1'>取消订单</view>
+        <view class='button' bindtap="buttAction" data-type='2'>立即付款</view>
+      </view>
+      <view hidden="{{cell.status != '02'}}">
+        <view class='button' bindtap="buttAction" data-type='3'>确认收货</view>
+      </view>
+      <view hidden="{{cell.status != '03'}}">
+        <view class='button' bindtap="buttAction" data-type='4'>再次购买</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

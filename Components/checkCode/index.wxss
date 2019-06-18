@@ -1,0 +1,24 @@
+.checkCode_input{
+  margin:30px 15px 0 15px;
+  height:35px;
+}
+.checkCode_input input{
+  float:left;
+  height:100%;
+  width:200px;
+  border-bottom:1px solid #dbdbdb;
+}
+.phone-checkCode {
+  width:100px;
+  line-height:35px;
+  margin-left:10px;
+  background: #FCE9E6;
+  color: #e5290d;
+  font-size:12px;
+  border:0;
+  text-align:center;
+  float:right;
+}
+.phone-checkCode > text{
+  color: #e5290d;
+}

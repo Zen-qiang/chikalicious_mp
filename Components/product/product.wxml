@@ -1,0 +1,28 @@
+<!--Components/productItem/productItem.wxml-->
+<view class="product-container" bindtap="enterDetail">
+  <!-- <product-item item="{{item}}" bindtap="enterDetail" data-pdtid="{{item.id}}"></product-item> -->
+
+  <view class='img'>
+    <image mode='aspectFill' src="{{item.imgUrl}}"></image>
+    <!-- <image mode='aspectFill' src="../../images/item6.png"></image> -->
+  </view>
+
+  <view class='show_msg'>
+
+    <view class='left'>
+      <view class="title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="price">
+        <text>￥{{item.price}}</text>
+      </view>
+      <!-- <text class="originPrice">{{item.originPrice}}</text> -->
+    </view>
+
+    <view class='right' catchtap='changeFav'>
+      <image src="../../images/collet_s.png" data-item="{{item}}" wx:if="{{item.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+      <image src="../../images/collet.png" data-item="{{item}}" wx:if="{{!item.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+    </view>
+
+  </view>
+</view>

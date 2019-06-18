@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "立即购买",
+  "usingComponents": {
+    "zan-stepper": "../../libs/ZanUI/stepper/index",
+    "zan-icon": "../../libs/ZanUI/icon/index",
+    "zan-button": "../../libs/ZanUI/btn/index",
+    "zan-cell": "../../libs/ZanUI/cell/index"
+  }
+}

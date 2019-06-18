@@ -1,0 +1,46 @@
+/* Components/inoutNum/inputNum.wxss */
+/* 数量输入组件 */
+.stepper {
+  width: 122px;
+  /* height: 62rpx; */
+  /*给主容器设一个边框*/
+  border: 2rpx solid #ccc;
+  border-radius: 6rpx;
+  /* margin-left:150px; */
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+}
+.stepper  .minusbtn {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-right: 1px solid #ccc;
+  line-height: 30px;
+  border-radius: 0;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.stepper .inputNum {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  padding-right: 35px;
+}
+.stepper .maxbtn {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-left: 1px solid #ccc;
+  line-height: 30px;
+  border-radius: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.disabledBtn {
+  background-color: #eee;
+}

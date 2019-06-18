@@ -1,0 +1,119 @@
+/* Components/orderList/orderListCell.wxss */
+
+.content {
+  font-size: 24rpx;
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+  box-shadow: 0rpx 4rpx 6rpx 7rpx rgba(243, 243, 243, 0.5);
+  background-color: #fff;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/*  */
+
+.header {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.header .status {
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.header .date {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.header .del {
+  height: 60rpx;
+}
+
+/*  */
+
+.middle {
+  margin: 20rpx 0;
+}
+
+.bottom {
+  text-align: left;
+  padding-bottom: 20rpx;
+}
+
+/* 中间 */
+
+.middle .cell {
+  height: 120rpx;
+  
+}
+
+.middle .con {
+  width: 60%;
+  height: 120rpx;
+  text-align: left;
+}
+
+.middle .con .img {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+
+.middle .con .img image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 7rpx;
+}
+
+.middle ._w_i_align {
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+
+.middle .msg {
+  height: 120rpx;
+  text-align: right;
+}
+
+/* 底部 */
+
+.bottom {
+  border-top: 1rpx solid #f4f4f4;
+  overflow: hidden;
+}
+
+.bottom .bot_left {
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.bottom .bot_right {
+  float: right;
+}
+
+.bottom .button {
+  display: inline-block;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-left: 10rpx;
+  border: 1px solid #ecb546;
+  border-radius: 7rpx;
+  color: #ecb546;
+}
+
+.f_t_yellow {
+  color: #ecb546;
+}

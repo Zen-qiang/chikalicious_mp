@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#f7f5f1",
+  "navigationBarTitleText": "周边",
+  "usingComponents": {
+    "product-list": "/Components/productList2/productList2"
+  }
+}

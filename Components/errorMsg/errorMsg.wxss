@@ -1,0 +1,5 @@
+/* Components/errorMsg/errorMsg.wxss */
+.errorMsg {
+  color:#EE3E46;
+  font-size:12px;
+}

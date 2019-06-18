@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/details",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/cart/cart",
+    "pages/passwordBack/passwordBack",
+    "pages/account/account",
+    "pages/updatePassword/updatePassword",
+    "pages/locate/locate",
+    "pages/order/order",
+    "pages/order/orderDetail/orderDetail",
+    "pages/findPassword/findPassword",
+    "pages/updatePwd/updatePwd",
+    "pages/allProduct/allProduct",
+    "pages/authorize/index",
+    "pages/buyNow/buyNow",
+    "pages/buyNow/invoice/invoice",
+    "pages/buyNow/contact/contact",
+    "pages/test/test",
+    "pages/webView/webView",
+    "pages/snack/snack",
+    "pages/contactsChoose/contactsChoose",
+    "pages/contactsManager/contactsManager",
+    "pages/contactsUpdate/contactsUpdate",
+    "pages/about/about",
+    "pages/buyNowSnack/buyNowSnack",
+    "pages/indexDetail/indexDetail",
+    "pages/xieyi/xieyi"
+  ],
+  "window": {
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": "50",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Chikalicious",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F7F7F",
+    "selectedColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_s.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/allProduct/allProduct",
+        "iconPath": "images/cake.png",
+        "selectedIconPath": "images/cake_s.png",
+        "text": "蛋糕"
+      },
+      {
+        "pagePath": "pages/snack/snack",
+        "iconPath": "images/cookie.png",
+        "selectedIconPath": "images/cookie_s.png",
+        "text": "周边"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_s.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "downloadFile": 6000
+  }
+}

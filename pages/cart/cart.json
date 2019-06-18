@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "我的收藏",
+  "disableScroll": true,
+  "usingComponents": {
+    "cartlist": "/Components/cartList/cartList"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Chikalicious",
+  "usingComponents": {
+    "swiperPdt": "/Components/swiperPdt/swiperPdt",
+    "errorMsg": "/Components/errorMsg/errorMsg"
+  }
+}

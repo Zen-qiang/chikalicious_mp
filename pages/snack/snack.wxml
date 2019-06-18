@@ -1,0 +1,12 @@
+<!--pages/snack/snack.wxml-->
+<view class='contenter'>
+  <view class='top'>
+    <scroll-view scroll-x>
+      <block wx:for="{{tabList}}" wx:key="{{index}}">
+        <view class="{{selectedId==item.id?'top_tab_butt checked':'top_tab_butt'}}" bindtap='handleTabChange' data-type='{{item.id}}'>{{item.title}}</view>
+      </block>
+    </scroll-view>
+    <view class='white_space'></view>
+  </view>
+  <product-list pdtlist="{{productList}}" type="SNACK" loading="{{loading}}"></product-list>
+</view>

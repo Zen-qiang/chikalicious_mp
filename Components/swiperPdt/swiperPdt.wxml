@@ -1,0 +1,19 @@
+<!--Components/swiperPdt/swiperPdt.wxml-->
+<swiper class="swiper-container">
+  <block wx:for="{{pdtList}}" wx:key="{{index}}">
+    <swiper-item class="swiper-item">
+      <view class="pdt-container">
+        <view class="pdt-thumbnail">
+          <image src="{{item.imgUrl}}"></image>
+          <view>{{item.title}}</view>
+          <view>{{item.desc}}</view>
+          <view>¥ {{item.price}}</view>
+          <button class="pdt-btn" plain="true" bindtap="getPdtInfo" data-pdtId="{{item.id}}">查看详情>></button>
+        </view>
+        <button bindtap="orderPdt" data-pdtId="{{item.id}}">立即预定</button>
+      </view>
+      
+    </swiper-item>
+  </block>
+  <modal bindclose="closeModal" wx:if="{{showModal}}"></modal>
+</swiper>

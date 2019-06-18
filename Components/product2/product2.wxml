@@ -1,0 +1,45 @@
+<!--Components/product2/product2.wxml-->
+
+<!-- <view class='contenter' bindtap="enterDetail" data-item="{{pdtInfo}}">
+  <view class='row row1' catchtap='changeFav'>
+    <image src="../../images/collet_s.png" data-item="{{pdtInfo}}" wx:if="{{pdtInfo.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+    <image src="../../images/collet.png" data-item="{{pdtInfo}}" wx:if="{{!pdtInfo.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+  </view>
+  <view class='row row2'>
+    <image mode='aspectFit' src="{{pdtInfo.imgUrl}}"></image>
+  </view>
+  <view class='row row3'>
+    <text>{{pdtInfo.title}}</text>
+  </view>
+  <view class='row row4'>
+    <text style='color:#ECB546'>￥{{pdtInfo.price}}</text>
+  </view>
+</view> -->
+
+<view class="product-container" bindtap="enterDetail">
+  <!-- <product-item item="{{item}}" bindtap="enterDetail" data-pdtid="{{item.id}}"></product-item> -->
+
+  <view class='img'>
+    <image mode='aspectFill' src="{{pdtInfo.imgUrl}}"></image>
+    <!-- <image mode='aspectFill' src="../../images/item6.png"></image> -->
+  </view>
+
+  <view class='show_msg'>
+
+    <view class='left'>
+      <view class="title">
+        <text>{{pdtInfo.title}}</text>
+      </view>
+      <view class="price">
+        <text>￥{{pdtInfo.price}}</text>
+      </view>
+      <!-- <text class="originPrice">{{item.originPrice}}</text> -->
+    </view>
+
+    <view class='right' catchtap='changeFav'>
+      <image src="../../images/collet_s.png" data-item="{{pdtInfo}}" wx:if="{{pdtInfo.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+      <image src="../../images/collet.png" data-item="{{pdtInfo}}" wx:if="{{!pdtInfo.isFav}}" style="width: 40rpx;height: 40rpx;"></image>
+    </view>
+
+  </view>
+</view>

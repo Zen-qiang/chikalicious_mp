@@ -1,0 +1,5 @@
+<!--富文本展示页面-->
+<import src="../../libs/wxParse/wxParse.wxml" />
+<view style='width:100%;margin:0;'>
+  <template is="wxParse" data="{{wxParseData:webContent.nodes}}" />
+</view>

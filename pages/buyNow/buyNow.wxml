@@ -1,0 +1,112 @@
+<view class='container'>
+
+  <view class='header' bindtap='addcontact'>
+    <view class='h_con'>
+      <view class='contact'>
+        <text>收货人:</text>
+        <text>{{name}}</text>
+        <text class='tell'>{{tell}}</text>
+      </view>
+      <view class='butt'>默认联系方式</view>
+    </view>
+  </view>
+
+  <view class='con'>
+
+    <view class='row row1 line'>
+      <view class='left '>
+        <image src='{{prodInfo.pdtInfo.imgUrl}}'></image>
+      </view>
+      <view class='right'>
+        <view class='t1'>{{prodInfo.pdtInfo.title}}</view>
+      </view>
+    </view>
+
+    <view class='row row2 line' style='min-height:120rpx;'>
+      <view class='left' style='min-width:120rpx;'>规格</view>
+      <view class='right'>
+        <block wx:for="{{prodInfo.pdtInfo.spec}}" wx:for-index="idx" wx:for-item="spec">
+          <view wx:key="{{idx}}" class='{{specID==spec.id?"checkbox checked":"checkbox"}}' bindtap='specAction' data-type='{{spec}}'>{{spec.value}}</view>
+        </block>
+      </view>
+    </view>
+
+    <view class='row line' style='height:120rpx;'>
+      <view class='left'>数量</view>
+      <view class='right'>
+        <zan-stepper className="step" stepper="{{count}}" min="{{stepper.min}}" max="{{stepper.max}}" bind:change="countStepperChange" />
+      </view>
+    </view>
+
+    <view class='row line' style='height:120rpx;'>
+      <view class='left'>是否需要蜡烛</view>
+      <view class='right'>
+        <switch bindchange="switchChange" />
+      </view>
+    </view>
+
+    <view class='row line' style='height:120rpx;'>
+      <view class='left'>餐具</view>
+      <view class='right'>
+        <zan-stepper className="dishStep" stepper="{{dishCount}}" min="{{dishStepper.min}}" max="{{dishStepper.max}}" bind:change="dishStepperChange" />
+      </view>
+    </view>
+
+    <picker value="{{storeInfo.index}}" range="{{storeInfo.key}}" bindchange="bindStoreChange">
+      <view class='row line' style='height:120rpx;'>
+        <view class='left'>门店</view>
+        <view class='right'>
+          <text style='display:inline-block; margin-right:20rpx; color:#B9B8B8'>{{storeInfo.key[storeInfo.index]}}</text>
+          <zan-icon type='arrow' />
+        </view>
+      </view>
+    </picker>
+
+    <picker mode='date' start="{{timeInfo.pickUpDate}}" bindchange="bindTimeChange">
+      <view class='row line' style='height:120rpx;'>
+        <view class='left'>自提日期</view>
+        <view class='right'>
+          <text style='display:inline-block; margin-right:20rpx; color:#B9B8B8'>{{timeInfo.value}}</text>
+          <zan-icon type='arrow' />
+        </view>
+      </view>
+    </picker>
+
+    <picker range="{{dateTime}}" bindchange="bindDateChange">
+      <view class='row line' style='height:120rpx;'>
+        <view class='left'>自提时间段</view>
+        <view class='right'>
+          <text style='display:inline-block; margin-right:20rpx; color:#B9B8B8'>{{dateTimeValue}}</text>
+          <zan-icon type='arrow' />
+        </view>
+      </view>
+    </picker>
+
+    <view class='row line' style='height:120rpx;' bindtap='invoiceAction'>
+      <view class='left'>需要发票</view>
+      <view class='right'>
+        <text>{{isNeedBill ? "是":"否"}}</text>
+      </view>
+    </view>
+
+    <view class='message line'>
+      <view class='title' style='font-size:27rpx; margin:40rpx 0 10rpx 0'>订单留言</view>
+      <view class='detail' style='color:#B8B8B8;font-size:23rpx;'>蛋糕祝福语需在12个中文字内/25个英文字母内</view>
+      <view class='area'>
+        <textarea bindinput='textInputAction' maxlength='25' placeholder="" />
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='amount' style=''>
+      <text style='font-size:23rpx'>总金额：</text>
+      <text style='font-size:20rpx; color:#ECB546;'>￥</text>
+      <text style='font-size:37rpx; color:#ECB546;'>{{orderPrice}}</text>
+    </view>
+    <view>
+      <view class='butt' bindtap='goPurchaseAction'>去付款</view>
+    </view>
+  </view>
+
+</view>

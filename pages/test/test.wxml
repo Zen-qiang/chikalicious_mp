@@ -1,0 +1,2 @@
+<button bindtap="register">注册</button>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</button>

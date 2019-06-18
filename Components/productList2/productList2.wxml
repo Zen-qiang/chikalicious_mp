@@ -1,0 +1,18 @@
+<!--Components/productList2/productList2.wxml-->
+
+<import src="../../libs/ZanUI/loadmore/index.wxml" />
+
+<view class="product-list">
+  <block wx:for="{{pdtlist}}" wx:key="{{index}}">
+    <product pdtInfo="{{item}}" type="{{type}}"></product>
+  </block>
+
+  <block wx:if="{{!pdtlist2.length%2}}">
+    <view class='white_space'> </view>
+  </block>
+</view>
+<view class="load-more" wx:if="{{loading}}">
+  <zan-loading type="spinner" color="#000" />
+  <!-- <template class="" is="zan-loadmore" data="{{loading: true}}"></template> -->
+  <!-- <template is="zan-loadmore" data="{{ nodata: true,nodata_str: '--加载完成--' }}" wx:if="{{!loading}}"></template> -->
+</view>
