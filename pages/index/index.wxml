@@ -64,6 +64,6 @@
     <product-list pdtlist="{{pdtList}}" loading="{{loading}}"></product-list>
   </view>
   <view class="refresh">
-    <text>{{currentTime}}</text>
+    <text>最后更新时间 {{currentTime}}</text>
   </view>
 </block>
