@@ -128,3 +128,9 @@ page {
   padding: 0 20rpx;
   color: #ecb546;
 }
+
+.refresh {
+  text-align: center;
+  padding: 5rpx;
+  color: #ddd;
+}

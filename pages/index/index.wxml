@@ -63,4 +63,7 @@
   <view class="index-pdtList">
     <product-list pdtlist="{{pdtList}}" loading="{{loading}}"></product-list>
   </view>
+  <view class="refresh">
+    <text>{{currentTime}}</text>
+  </view>
 </block>

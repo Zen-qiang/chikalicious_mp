@@ -22,10 +22,12 @@ Page({
     duration: 1000,
     loading: true,
     noData: false,
+    startTime: null,
+    currentTime: null
   },
 
   onLoad: function() {
-    this.getCarouselList(); // 获取首页幻灯片
+    // this.getCarouselList(); // 获取首页幻灯片
     let _that = this;
     location.getAddress((res) => {
       var oldCityName = app.getValue('cityName');
@@ -57,19 +59,34 @@ Page({
   onShow: function() {
     let cityName = app.getValue('cityName');
     let cityCode = app.getValue('cityCode');
-    if (cityCode != this.data.cityCode) {
-      this.reloadData(cityName, cityCode);
-    }
+    // if (cityCode != this.data.cityCode) {
+    //   this.reloadData(cityName, cityCode);
+    // }
+    this.reloadData(cityName, cityCode);
   },
-
+  onTabItemTap(item) {
+    const nowTime = Date.now()
+    if (nowTime - this.data.startTime < 60 * 1000) return
+    let cityName = app.getValue('cityName');
+    let cityCode = app.getValue('cityCode');
+    this.reloadData(cityName, cityCode);
+  },
   prodAction: function(e) {
     let pdtid = e.currentTarget.dataset.prod.id;
     wx.navigateTo({
       url: `/pages/details/details?id=${pdtid}&type=CAKE`,
     })
   },
-
+  formatDate (date) {
+    let time = new Date(date),
+      hour = time.getHours(),
+      minute = time.getMinutes(),
+      second = time.getSeconds()
+    return hour + ":" + minute + ":" + second
+  },
   reloadData: function(cityName, cityCode) {
+    const dateNow = Date.now(),
+      currentTime = this.formatDate(dateNow)
     this.setData({
       cityName: cityName,
       cityCode: cityCode,
@@ -79,8 +96,10 @@ Page({
         total: null,
         pages: null,
       },
-      pdtList: [],
+      // pdtList: [],
       noData: false,
+      startTime: dateNow,
+      currentTime: currentTime
     });
     this.getCarouselList(); // 首页幻灯片
     this.getNewProd(); // 新品推荐
@@ -145,7 +164,8 @@ Page({
     }
     app.nGet(data).then(data => {
       if (data.data) {
-        let pdtList = this.data.pdtList.concat(data.data.list);
+        let pdtList = data.data.page === 1 ? data.data.list : this.data.pdtList.push(...data.data.list)
+        // let pdtList = this.data.pdtList.concat(data.data.list);
         this.setData({
           pagination: {
             page: data.data.page + 1,
