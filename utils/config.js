@@ -2,6 +2,7 @@
 var root = '';
 // root = 'https://sit.dingliantech.com/api'; // dev环境
 root = 'https://mp.chikalicious.cn/api';
+// root = 'http://bobo.easy.echosite.cn/api';
 // 
 
 var Config = {

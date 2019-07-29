@@ -2,11 +2,11 @@
 <view class="login">
   <view class="login-container">
     <view class="login-cell input-cell">
-      <input class="weui-input" bindinput="bindPhoneInput" value="{{telPhone}}" placeholder="请输入手机号" placeholder-class="phcolor" bindblur="confirmPhone" />
+      <input class="weui-input" bindinput="bindPhoneInput" value="{{telPhone}}" placeholder="请输入手机号" placeholder-class="phcolor"  />
     </view>
     <view class="login-cell input-cell">
       <view class="input-cell-container">
-        <input style="width:100%;" class="weui-input" bindinput="bindVerCode" value="{{verCode}}" placeholder="请输入手机验证码" placeholder-class="phcolor" bindblur="confirmPhone" />
+        <input style="width:100%;" class="weui-input" bindinput="bindVerCode" value="{{verCode}}" placeholder="请输入手机验证码" placeholder-class="phcolor"  />
       </view>
       <view style="color:rgba(211,207,198,1);font-size:30rpx;">|</view>
       <button class="ver-code-container-btn {{checkcodeDisable?'login-btn-disabled':''}}" bindtap='getVerCode' disabled='{{checkcodeDisable}}'>{{verText}}</button>
