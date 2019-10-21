@@ -14,6 +14,8 @@
 	"appid": "wx82d1d364a8c3a105",
 	"projectname": "chikalicious",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
